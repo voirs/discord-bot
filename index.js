@@ -20,7 +20,7 @@ client.on('message', message => {
         giphy.search('gifs', {"q": "fail"}) // look for 'fail' gifs in the giphy api
             .then((response) => {
                 var totalResponses = response.data.length; // amount of gifs
-                var responseIndex = Math.floor((Math.random() * 10) +1) % totalResponses; // makes sure the gifs  are randomized 
+                var responseIndex = Math.floor((Math.random() * 10) +1) % totalResponses; // makes sure the gifs are randomised 
                 var responseFinal = response.data[responseIndex]; // chosen gif
                 
                 message.channel.send(":wave: " + member.displayName + " has been kicked!", { // bot will send an emoji, the kicked member's name and the rest of the message
